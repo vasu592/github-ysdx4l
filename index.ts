@@ -29,7 +29,7 @@ function initMap(): void {
   );
 
   // The photograph is courtesy of the U.S. Geological Survey.
-  let image = "";
+  let image = "../images/VIVAIPune.jpg";
 
   /**
    * The custom USGSOverlay object contains the USGS image,
