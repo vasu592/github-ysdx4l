@@ -12,8 +12,8 @@ function initMap(): void {
   const map = new google.maps.Map(
     document.getElementById('map') as HTMLElement,
     {
-      zoom: 15,
-      center: { lat: 50.86843, lng: 7.14126 },
+      zoom: 18,
+      center: { lat: 18.5304185, lng: 73.8725182 },
       mapTypeId: 'satellite',
     }
   );
@@ -21,15 +21,15 @@ function initMap(): void {
   const bounds = new google.maps.LatLngBounds(
     //new google.maps.LatLng(62.281819, -150.287132),
     //new google.maps.LatLng(62.400471, -150.005608)
-	new google.maps.LatLng(50.84887,7.11036),
-	new google.maps.LatLng(50.88614, 7.13680)
-	
-	//new google.maps.LatLng(50.88270, 7.09371),
-   // new google.maps.LatLng(50.85180,7.17817)
+    new google.maps.LatLng(18.530995, 73.870333),
+    new google.maps.LatLng(18.53182, 73.871403)
+
+    //new google.maps.LatLng(50.88270, 7.09371),
+    // new google.maps.LatLng(50.85180,7.17817)
   );
 
   // The photograph is courtesy of the U.S. Geological Survey.
-  let image = "../images/VIVAIPune.jpg";
+  let image = '../images/VIAVIPuneWithOrientation-2.jpg';
 
   /**
    * The custom USGSOverlay object contains the USGS image,
