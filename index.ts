@@ -17,32 +17,32 @@ function initMap(): void {
       mapTypeId: 'satellite',
     }
   );
-  new google.maps.Marker({
-    position: { lat: 18.5314, lng: 73.870999 },
-    map,
-    title: 'Center',
-  });
+  // new google.maps.Marker({
+  //   position: { lat: 18.5314, lng: 73.870999 },
+  //   map,
+  //   title: 'Center',
+  // });
   const bounds = new google.maps.LatLngBounds(
     //new google.maps.LatLng(62.281819, -150.287132),
     //new google.maps.LatLng(62.400471, -150.005608)
-    new google.maps.LatLng(18.530799, 73.870433),
-    new google.maps.LatLng(18.53186, 73.87127)
+    new google.maps.LatLng(18.531028447529295, 73.87064),
+    new google.maps.LatLng(18.531781, 73.8710073)
 
     //new google.maps.LatLng(50.88270, 7.09371),
     // new google.maps.LatLng(50.85180,7.17817)
   );
   new google.maps.Marker({
-    position: { lat: 18.530799, lng: 73.870433 },
+    position: { lat: 18.531028447529295, lng: 73.87064 },
     map,
     title: 'South West',
   });
   new google.maps.Marker({
-    position: { lat: 18.53186, lng: 73.87127 },
+    position: { lat: 18.531781, lng: 73.8710073 },
     map,
     title: 'North East',
   });
   // The photograph is courtesy of the U.S. Geological Survey.
-  let image = '../images/My project.png';
+  let image = '../images/exact.jpg';
 
   /**
    * The custom USGSOverlay object contains the USGS image,
