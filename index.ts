@@ -26,8 +26,10 @@ function initMap(): void {
     //new google.maps.LatLng(62.281819, -150.287132),
     //new google.maps.LatLng(62.400471, -150.005608)
     new google.maps.LatLng(18.531028447529295, 73.87064),
-    new google.maps.LatLng(18.531781, 73.8710073)
+    new google.maps.LatLng(18.531781, 73.8710073),
 
+    // new google.maps.LatLng(18.531701985747137, 73.87053206061877),
+    // new google.maps.LatLng(18.53109456918211, 73.87113337868803)
     //new google.maps.LatLng(50.88270, 7.09371),
     // new google.maps.LatLng(50.85180,7.17817)
   );
@@ -41,8 +43,18 @@ function initMap(): void {
     map,
     title: 'North East',
   });
+  new google.maps.Marker({
+    position: { lat: 18.531701985747137, lng: 73.87053206061877 },
+    map,
+    title: 'North West',
+  });
+  new google.maps.Marker({
+    position: { lat: 18.53109456918211, lng: 73.87113337868803 },
+    map,
+    title: 'South East',
+  });
   // The photograph is courtesy of the U.S. Geological Survey.
-  let image = '../images/exact.jpg';
+  let image = '../images/Picture1.png';
 
   /**
    * The custom USGSOverlay object contains the USGS image,
