@@ -12,24 +12,37 @@ function initMap(): void {
   const map = new google.maps.Map(
     document.getElementById('map') as HTMLElement,
     {
-      zoom: 18,
-      center: { lat: 18.5304185, lng: 73.8725182 },
+      zoom: 21,
+      center: { lat: 18.5314, lng: 73.870999 },
       mapTypeId: 'satellite',
     }
   );
-
+  new google.maps.Marker({
+    position: { lat: 18.5314, lng: 73.870999 },
+    map,
+    title: 'Center',
+  });
   const bounds = new google.maps.LatLngBounds(
     //new google.maps.LatLng(62.281819, -150.287132),
     //new google.maps.LatLng(62.400471, -150.005608)
-    new google.maps.LatLng(18.530995, 73.870333),
-    new google.maps.LatLng(18.53182, 73.871403)
+    new google.maps.LatLng(18.530799, 73.870433),
+    new google.maps.LatLng(18.53186, 73.87127)
 
     //new google.maps.LatLng(50.88270, 7.09371),
     // new google.maps.LatLng(50.85180,7.17817)
   );
-
+  new google.maps.Marker({
+    position: { lat: 18.530799, lng: 73.870433 },
+    map,
+    title: 'South West',
+  });
+  new google.maps.Marker({
+    position: { lat: 18.53186, lng: 73.87127 },
+    map,
+    title: 'North East',
+  });
   // The photograph is courtesy of the U.S. Geological Survey.
-  let image = '../images/VIAVIPuneWithOrientation-2.jpg';
+  let image = '../images/My project.png';
 
   /**
    * The custom USGSOverlay object contains the USGS image,
@@ -166,28 +179,45 @@ function initMap(): void {
 
   map.controls[google.maps.ControlPosition.TOP_RIGHT].push(toggleDOMButton);
   map.controls[google.maps.ControlPosition.TOP_RIGHT].push(toggleButton);
+
   google.maps.event.addListener(map, 'click', function (event) {
-    console.log(event.pixel.x, event.pixel.y);
+    console.log('x and y values', event.pixel.x, event.pixel.y);
 
-    var pixelLatLng = overlay
-      .getProjection()
-      .fromDivPixelToLatLng(
-        new google.maps.Point(event.pixel.x, event.pixel.y)
-      );
+    var data = [
+      { x: 439, y: 472 },
+      { x: 466.4995532295124, y: 467.1755169772785 },
+      { x: 492.4697674418605, y: 437.5953488372093 },
+      { x: 415.46644331568143, y: 311.47119853020644 },
+      { x: 289.7771671246565, y: 214.93180114913815 },
+      { x: 205.09169455904103, y: 68.77629018447888 },
+    ];
+    for (var i = 0; i < data.length; i++) {
+      var pixelLatLng = overlay
+        .getProjection()
+        .fromContainerPixelToLatLng(
+          new google.maps.Point(data[i].x, data[i].y)
+        );
 
-    var msg =
-      ': Div setting marker at Lat: ' +
-      pixelLatLng.lat() +
-      ', Lng: ' +
-      pixelLatLng.lng();
-    console.log(msg);
-
+      // if (pixelLatLng) {
+      //   new google.maps.Marker({
+      //     position: { lat: pixelLatLng.lat(), lng: pixelLatLng.lng() },
+      //     map,
+      //     title: 'Hello World!',
+      //   });
+      // }
+    }
     var pixelLatLng1 = overlay
       .getProjection()
       .fromContainerPixelToLatLng(
         new google.maps.Point(event.pixel.x, event.pixel.y)
       );
-
+    if (pixelLatLng1) {
+      new google.maps.Marker({
+        position: { lat: pixelLatLng1.lat(), lng: pixelLatLng1.lng() },
+        map,
+        title: 'Hello World!',
+      });
+    }
     var msg1 =
       ': Container setting marker at Lat: ' +
       pixelLatLng1.lat() +
