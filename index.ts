@@ -46,7 +46,7 @@ function initMap(): void {
   });
  
   // The photograph is courtesy of the U.S. Geological Survey.
-  let image = '../images/Pune3.png';
+  let image = '../images/Pune2.png';
 
   /**
    * The custom USGSOverlay object contains the USGS image,
