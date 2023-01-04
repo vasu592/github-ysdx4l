@@ -12,9 +12,19 @@ function initMap(): void {
   const map = new google.maps.Map(
     document.getElementById('map') as HTMLElement,
     {
-      zoom: 19,
-      center: { lat: 18.5314, lng: 73.870999 },
+      zoom: 19, 
+      center: { lat: 12.970008253216134, lng: 80.24373160892242 },
       mapTypeId: 'satellite',
+    streetViewControl: false,
+        styles: [
+            {
+                featureType: 'all',
+                elementType: 'labels',
+                stylers: [{
+                    visibility: 'off'
+                }]
+            }
+        ]
     }
   );
   // new google.maps.Marker({
@@ -22,6 +32,7 @@ function initMap(): void {
   //   map,
   //   title: 'Center',
   // });
+ 
   const bounds = new google.maps.LatLngBounds(
     //new google.maps.LatLng(62.281819, -150.287132),
     //new google.maps.LatLng(62.400471, -150.005608)
