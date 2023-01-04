@@ -57,7 +57,7 @@ function initMap(): void {
   });
  
   // The photograph is courtesy of the U.S. Geological Survey.
-  let image = '../images/Chennai.png';
+  let image = '../images/Img02.jpg';
 
   /**
    * The custom USGSOverlay object contains the USGS image,
