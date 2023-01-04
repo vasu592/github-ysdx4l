@@ -36,8 +36,8 @@ function initMap(): void {
   const bounds = new google.maps.LatLngBounds(
     //new google.maps.LatLng(62.281819, -150.287132),
     //new google.maps.LatLng(62.400471, -150.005608)
-    new google.maps.LatLng(18.530864611080084, 73.87039111385027),
-    new google.maps.LatLng(18.531782683389885, 73.8713674379317)
+    new google.maps.LatLng(12.969909922543629, 80.24355612201963),
+    new google.maps.LatLng(12.970066396552015, 80.24386497896852)
   
 
     // new google.maps.LatLng(18.531701985747137, 73.87053206061877),
@@ -46,7 +46,7 @@ function initMap(): void {
     // new google.maps.LatLng(50.85180,7.17817)
   );
   new google.maps.Marker({
-    position: { lat:18.531782683389885, lng: 73.8713674379317 },
+    position: { lat:12.969909922543629, lng: 80.24355612201963 },
     map,
     title: 'South West',
   });
@@ -57,7 +57,7 @@ function initMap(): void {
   });
  
   // The photograph is courtesy of the U.S. Geological Survey.
-  let image = '../images/Pune2.png';
+  let image = '../images/Chennai.png';
 
   /**
    * The custom USGSOverlay object contains the USGS image,
